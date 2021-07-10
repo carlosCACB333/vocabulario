@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+
+import {  useSelector } from 'react-redux';
 import './App.css';
+import Panel from './components/Panel';
+import PanelBlank from './components/PanelBlank';
+import SideBar from './components/SideBar';
+
 
 function App() {
+  const active = useSelector(state => state.vocabulario.active);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+     <SideBar />
+      {
+        (active.length!==0)
+        ?(  <Panel />)
+        :(<PanelBlank/>)   
+      }
+     
+    </>
   );
 }
 
