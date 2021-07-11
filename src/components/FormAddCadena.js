@@ -22,11 +22,11 @@ const FormAddCadena = () => {
     return (
          <form className=" g-3  text-center p-5 " onSubmit={handleSubmit}>
     
-                <h2>Ingresar símbolos</h2>
+                <h4>Ingresar símbolos</h4>
                 <div className="row">
                     <label className=" col-sm-12 col-lg-3 col-form-label text-white">Símbolo</label>
                     <div className=" col-sm-12 col-lg-6">
-                    <input type="text" className="form-control" name='cadena' onChange={handleInputChange} value={values.cadena} autoComplete='off'/>
+                    <input type="text" className="form-control bg-transparent text-white" name='cadena' onChange={handleInputChange} value={values.cadena} autoComplete='off'/>
                     </div>
                     <div className=' col-sm-12 col-lg-3'>
                         <button

@@ -10,3 +10,13 @@
 .hover:hover {
   background-color: #82adf3 !important;
 }
+
+.contenedor {
+  width: 100vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .contenedor > .sidebar {
+    height: initial !important;
+  }
+}

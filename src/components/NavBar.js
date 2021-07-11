@@ -5,7 +5,7 @@ const NavBar = () => {
 
     const index = useSelector(state => state.vocabulario.active.index);
     return (
-        <ul className="nav justify-content-between shadow p-1">
+        <ul className="nav justify-content-between  shadow  mb-4 ms-3 p-3">
             <div></div>
             <h3 className='text-white'>vocabulario { index+1}</h3>
            <div className='d-flex'>

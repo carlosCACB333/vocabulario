@@ -14,7 +14,7 @@ const Vocabularios = ({ index,vocabulario }) => {
         dispatch(startVocabularioDelete(index))
     }
     return (
-        <>
+        <div className='ms-2'>
             <div className={`alert shadow-lg alert-dismissible fade show hover m-3 p-0 ${(index===active.index)?('active'):''} animate__animated animate__backInLeft`} role="alert"  >
                 <div className='m-2 pointer' style={{height:'100%'}} onClick={handleClick}>
                     <h6>vocabulario : {index+1}</h6>
@@ -23,7 +23,7 @@ const Vocabularios = ({ index,vocabulario }) => {
                 </div>
                 <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close" onClick={handleDelete}></button>
             </div>
-        </>
+        </div>
     )
 }
 

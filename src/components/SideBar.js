@@ -12,7 +12,7 @@ const SideBar = () => {
         dispatch(startAddVocabulario());
     }
     return (
-        <div className="d-flex flex-column flex-shrink-0 p-3 text-white shadow  flex-fill" style={{  height: '100vh' , maxWidth:'600px'}}>
+        <div className="sidebar d-flex flex-column flex-shrink-0 p-3 text-white  col-md-4 col-12 fill-content" style={{  height: '100vh' }}>
             <div className='text-center'>
                 <img src='https://estudiaperu.pe/wp-content/uploads/2019/12/UNASAM.png' alt="no se pudo cargar" style={{maxHeight:'150px'}} className='img-fluid' />
             </div>
@@ -21,12 +21,12 @@ const SideBar = () => {
                 <button
                     className='btn btn-primary btn-lg'
                     onClick={handleClick}
-                    disabled={(vocabularios.length===5)?true:false}
+                    disabled={(vocabularios.length===6)?true:false}
                 >
                
                 
                 {
-                (vocabularios.length === 5)
+                (vocabularios.length === 6)
                          ?(
                              <strong className='text-center text-warning'>La cantidad máxima de vocabularios es 6</strong>
                         )
@@ -49,7 +49,7 @@ const SideBar = () => {
                 
             </div>
             
-            <hr/>
+          
             
         </div>
     )

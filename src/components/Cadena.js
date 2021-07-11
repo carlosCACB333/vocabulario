@@ -43,7 +43,7 @@ const Cadena = () => {
          
             
            <div className='m-1'>
-                <div className='text-white  overflow-auto d-grid' style={{maxHeight:'450px'}}>
+                <div className='text-white  overflow-auto d-grid' style={{maxHeight:'400px'}}>
                     
                     {
                         

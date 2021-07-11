@@ -10,7 +10,7 @@ function App() {
   const active = useSelector(state => state.vocabulario.active);
   
   return (
-    <>
+    <div className='row contenedor'>
      <SideBar />
       {
         (active.length!==0)
@@ -18,7 +18,7 @@ function App() {
         :(<PanelBlank/>)   
       }
      
-    </>
+    </div>
   );
 }
 
