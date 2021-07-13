@@ -9,9 +9,6 @@ const FormAddCadena = () => {
 
     const vocabulario = useSelector(state => state.vocabulario)
 
-   
-  
-
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(startVocabularioAddCadena(vocabulario.active.index, values.cadena));

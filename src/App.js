@@ -7,11 +7,13 @@ import SideBar from './components/SideBar';
 
 
 function App() {
+  
   const active = useSelector(state => state.vocabulario.active);
   
   return (
     <div className='row contenedor'>
-     <SideBar />
+      <SideBar />
+      
       {
         (active.length!==0)
         ?(  <Panel />)

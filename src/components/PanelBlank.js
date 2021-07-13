@@ -9,7 +9,7 @@ const PanelBlank = () => {
                     si aún no tienes ningún vocabulario presiona en <strong> agregar nuevo vocabulario </strong>
                 </div>
       
-          <img src='https://estudiaperu.pe/wp-content/uploads/2019/12/UNASAM.png' alt="no se pudo cargar" style={{maxHeight:'300px'}} className='img-fluid' />
+          <img src='https://estudiaperu.pe/wp-content/uploads/2019/12/UNASAM.png' alt="no se pudo cargar" style={{maxHeight:'300px',opacity:'0.5'}} className='img-fluid' />
         </div>
     )
 }

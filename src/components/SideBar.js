@@ -6,11 +6,13 @@ import { startAddVocabulario } from '../actions/vocabulario';
 const SideBar = () => {
 
     const dispatch = useDispatch();
+
     const vocabularios = useSelector(state => state.vocabulario.vocabularios);
    
     const handleClick = () => {
         dispatch(startAddVocabulario());
     }
+
     return (
         <div className="sidebar d-flex flex-column flex-shrink-0 p-3 text-white  col-md-4 col-12 fill-content" style={{  height: '100vh' }}>
             <div className='text-center'>
@@ -25,16 +27,16 @@ const SideBar = () => {
                 >
                
                 
-                {
-                (vocabularios.length === 6)
-                         ?(
-                             <strong className='text-center text-warning'>La cantidad máxima de vocabularios es 6</strong>
-                        )
-                        : (
-                             <strong>Agregar nuevo vocabulario</strong>
-                        )
-                
-               }
+                    {
+                    (vocabularios.length === 6)
+                            ?(
+                                <strong className='text-center text-warning'>La cantidad máxima de vocabularios es 6</strong>
+                            )
+                            : (
+                                <strong>Agregar nuevo vocabulario</strong>
+                            )
+                    
+                    }
                 </button>
             
          

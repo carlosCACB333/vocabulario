@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
-import { aleatorio } from '../helpers/aleatorio';
+import { gererarCadenas } from '../helpers/functions';
 
 const Cadena = () => {
     const count = useSelector(state => state.count);
@@ -10,17 +10,10 @@ const Cadena = () => {
 
     
     const handleClick = () => {
-        let arrayCadenas = [];
+        
         if (active.length !== 0) {
-            for (let index = 0; index < count.cantidad; index++) {
-                arrayCadenas.push(cadena(active))
-            }
-
-            setState(arrayCadenas);
-                     
-        } else {
-            setState([]);
-        }
+            setState(gererarCadenas(active, count.cantidad));          
+        } 
     }
 
     useEffect(() => {
@@ -40,8 +33,6 @@ const Cadena = () => {
                 
             </div>
 
-         
-            
            <div className='m-1'>
                 <div className='text-white  overflow-auto d-grid' style={{maxHeight:'400px'}}>
                     
@@ -55,25 +46,9 @@ const Cadena = () => {
                         ))
                     }
                 </div>
-            </div>
-            
-            
-            
+            </div>  
         </div>
     )
 }
 
 export default Cadena
-
-
-const cadena = (vocabulario) => {
-
-    const len=aleatorio(1,vocabulario.length+1)
-   // desordenados
-    const shuffled = vocabulario.sort(() => 0.5 - Math.random());
-
-    // n primeros del array
-    let selected = shuffled.slice(0, len);
-     
-    return selected;
-}

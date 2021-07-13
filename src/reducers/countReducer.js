@@ -7,7 +7,6 @@ export const countReducer = (state = { cantidad: 0 }, action) => {
             return {
                 ...state,
                 cantidad:action.payload.cantidad
-
             }
             
     
