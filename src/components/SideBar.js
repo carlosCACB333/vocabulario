@@ -10,7 +10,9 @@ const SideBar = () => {
     const vocabularios = useSelector(state => state.vocabulario.vocabularios);
    
     const handleClick = () => {
-        dispatch(startAddVocabulario());
+        if (vocabularios.length <= 5) {
+            dispatch(startAddVocabulario());            
+        }
     }
 
     return (
@@ -23,14 +25,14 @@ const SideBar = () => {
                 <button
                     className='btn btn-primary btn-lg'
                     onClick={handleClick}
-                    disabled={(vocabularios.length===6)?true:false}
+                    disabled={(vocabularios.length===5)?true:false}
                 >
                
                 
                     {
-                    (vocabularios.length === 6)
+                    (vocabularios.length === 5)
                             ?(
-                                <strong className='text-center text-warning'>La cantidad máxima de vocabularios es 6</strong>
+                                <strong className='text-center text-warning'>La cantidad máxima de vocabularios es 5</strong>
                             )
                             : (
                                 <strong>Agregar nuevo vocabulario</strong>
