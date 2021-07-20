@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { startActiveVocabulario, startVocabularioDelete } from '../actions/vocabulario';
+import { arrayToString } from '../helpers/functions';
 
 const Vocabularios = ({ index,vocabulario }) => {
     
@@ -19,7 +20,7 @@ const Vocabularios = ({ index,vocabulario }) => {
                 <div className='m-2 pointer' style={{height:'100%'}} onClick={handleClick}>
                     <h6>vocabulario : {index+1}</h6>
                    
-                    <p><strong>V{ index+1 }={JSON.stringify(vocabulario,null,'  ')}</strong></p>
+                    <p><strong>V{ index+1 }={arrayToString(vocabulario)}</strong></p>
                 </div>
                 <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close" onClick={handleDelete}></button>
             </div>
